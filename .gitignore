@@ -1,0 +1,57 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs #
+########
+*.log
+*.out
+
+# IDEs and editors #
+####################
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Python #
+##########
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+
+# Jupyter Notebook #
+####################
+.ipynb_checkpoints/
+
+# macOS #
+#########
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows #
+###########
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
