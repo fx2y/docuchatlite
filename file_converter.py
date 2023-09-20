@@ -20,6 +20,10 @@ class FileConverter:
         else:
             raise ValueError(f"Unsupported file format: {file_extension}")
 
+    def detect_file_type(self, file_path):
+        file_extension = os.path.splitext(file_path)[1]
+        return file_extension
+
     def _convert_pdf_to_text(self, file_path):
         with open(file_path, "rb") as f:
             pdf_reader = PdfReader(f)

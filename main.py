@@ -16,7 +16,11 @@ file_converter = FileConverter()
 def convert_files():
     file_paths = file_selector.get_file_paths()
     texts = [file_converter.convert_to_text(file_path) for file_path in file_paths]
-    print(texts)
+    for file_path, file_type, text in zip(file_paths, map(file_converter.detect_file_type, file_paths), texts):
+        print(f"File path: {file_path}")
+        print(f"File type: {file_type}")
+        print(f"Text: {text}")
+        print()
 
 
 convert_button = tk.Button(
