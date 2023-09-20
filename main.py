@@ -1,4 +1,6 @@
 import tkinter as tk
+
+from file_saver import FileSaver
 from file_selector import FileSelector
 from file_converter import FileConverter
 
@@ -17,10 +19,9 @@ def convert_files():
     file_paths = file_selector.get_file_paths()
     texts = [file_converter.convert_to_text(file_path) for file_path in file_paths]
     for file_path, file_type, text in zip(file_paths, map(file_converter.detect_file_type, file_paths), texts):
-        print(f"File path: {file_path}")
-        print(f"File type: {file_type}")
-        print(f"Text: {text}")
-        print()
+        file_saver = FileSaver("storage")
+        file_id = file_saver.save_file(text)
+        print(file_id)
 
 
 convert_button = tk.Button(
