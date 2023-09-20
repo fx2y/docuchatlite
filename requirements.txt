@@ -1,0 +1,3 @@
+scikit-learn~=1.3.0
+textract~=1.6.5
+pypdf2~=3.0.1
