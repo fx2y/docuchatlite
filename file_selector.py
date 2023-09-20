@@ -4,6 +4,8 @@ from tkinter import filedialog
 
 
 class FileSelector:
+    SUPPORTED_FORMATS = (".pdf", ".txt", ".docx")
+
     def __init__(self, root):
         self.root = root
         self.file_paths = []
@@ -26,6 +28,9 @@ class FileSelector:
 
     def get_file_paths(self):
         return self.file_paths
+
+    def is_supported_format(self, file_path):
+        return file_path.endswith(self.SUPPORTED_FORMATS)
 
     def create_file_selector_ui(self):
         select_button = tk.Button(

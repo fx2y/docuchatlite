@@ -9,3 +9,8 @@ root.mainloop()
 # To get the selected file paths:
 file_paths = file_selector.get_file_paths()
 print(file_paths)
+
+# To check if a file path is in a supported format:
+file_path = "example.pdf"
+is_supported = file_selector.is_supported_format(file_path)
+print(is_supported)
