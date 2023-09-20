@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 
 from file_saver import FileSaver
@@ -22,6 +23,11 @@ def convert_files():
         file_saver = FileSaver("storage")
         file_id = file_saver.save_file(text)
         print(file_id)
+
+        file_path = os.path.join("storage", f"{file_id}.txt")
+        with open(file_path, "r") as f:
+            text = f.read()
+            print(text)
 
 
 convert_button = tk.Button(
